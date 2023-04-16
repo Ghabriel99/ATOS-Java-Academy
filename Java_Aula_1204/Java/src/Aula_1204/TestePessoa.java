@@ -9,6 +9,6 @@ public class TestePessoa {
       System.out.println("O nome da pessoa é " + pessoa.nome +  " e a idade é " + pessoa.idade);
       System.out.println("O nome da pessoa é " + pessoa2.nome +  " e a idade é " + pessoa2.idade);
 
-      System.out.println("A pessoa 1 é " + pessoa);
+      System.out.println();
    }
 }
