@@ -7,14 +7,14 @@ public class LocadoraVeiculos {
    public static void main(String[] args) {
 
       Carro carro = new Carro();
-      System.out.println(" Dados do carro do ex03: " + carro.getFabricante() + " " + carro.getModelo2());
+      System.out.println(" Dados do carro do ex03: " + carro.getFabricante() + " " + carro.getModelo2()); //usando get e set do private
 
       System.out.println("Começando o exercício 4");
 
       Scanner sc = new Scanner(System.in);
 
       System.out.println("Insira o modelo da moto: ");
-      String modeloMoto = sc.nextLine();
+      String modeloMoto = sc.nextLine();  // modeloMoto salva a leitura do scanner
       System.out.println("O modelo da moto é: " + modeloMoto);
 
       
