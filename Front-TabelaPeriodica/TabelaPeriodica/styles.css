@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+}
+
+:root {
+   --bg-preto: rgb(13, 13, 13);
+   --nao-metal: rgb(197, 242, 75);
+   --metal-alcalino: rgb(249, 182, 38);
+   --gas-nobre: rgb(47, 163, 252);
+   --metal-alcalino-terroso: rgb(249, 236, 46);
+   --semimetal: rgb(107, 224, 211);
+   --halogenio: rgb(121, 177, 255);
+   --outros-metais: rgb(186, 186, 186);
+   --metal-transicao: rgb(249, 119, 119);
+   --lantanideo: rgb(140, 247, 247);
+   --actinidio: rgb(251, 133, 220);
+}
+
+body {
+   font: 1em/1 'Montserrat', sans-serif;
+   color: rgb(255, 255, 255);
+   text-align: center;
+   padding: 1em 5%;
+   background: var(--bg-preto);
+}
+
+
+.nao-metal {
+   color: var(--nao-metal);
+}
+
+.gas-nobre {
+   color: var(--gas-nobre);
+}
+
+.metal-alcalino {
+   color: var(--metal-alcalino);
+}
+
+.metal-alcalino-terroso {
+   color: var(--metal-alcalino-terroso);
+}
+
+.semimetal {
+   color: var(--semimetal);
+}
+
+.halogenio {
+   color: var(--halogenio);
+}
+
+.outros-metais {
+   color: var(--outros-metais);
+}
+
+.metal-transicao {
+   color: var(--metal-transicao);
+}
+
+.lantanideo {
+   color: var(--lantanideo);
+}
+
+.actinidio {
+   color: var(--actinidio);
+}
+
+
+h1 {
+   margin: .3em 0;
+   font-size: calc(2vw + 1rem);
+   font-weight: 60;
+   text-transform: uppercase;
+   letter-spacing: -.03em;
+}
+
+h2 {
+   font-size: 2em;
+}
+
+p:last-child {
+   font-size: .8em;
+}
+
+
+main {
+   margin: auto;
+   max-width: 45em;
+   display: flex;
+}
+
+#grid-container {
+   flex-grow: 1;
+   min-width: 7em;
+}
+
+.col-hidden {
+   display: none;
+}
+
+section {
+   height: 7em;
+   background: var(--bg-preto);
+   border: .125rem solid;
+   border-radius: .25rem;
+   line-height: 1.25;
+   margin-bottom: .5em;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+span {
+   font-size: .75em;
+   position: absolute;
+   top: .3em;
+   left: .5em;
+}
+
+footer {
+   font-size: .8em;
+   text-align: left;
+   flex-basis: 13.5rem;
+   margin: -.25em 0 0 1em;
+}
+
+ul {
+   display: flex;
+   flex-wrap: wrap;
+   position: sticky;
+   top: 1em;
+}
+
+li {
+   flex-basis: 100%;
+   line-height: 1.25;
+   margin-bottom: 1em;
+}
+
+li:before {
+   content: ' ';
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+   border: .125em solid;
+   border-radius: .125rem;
+   margin-right: .5em;
+   position: relative;
+   top: .25em;
+}
+
+
+@media only screen and (min-width:92.5em) {
+   @supports (display:grid) {
+
+      /* GLOBAL STYLES */
+      body {
+         font-size: .65em;
+         padding: 2em;
+      }
+
+
+      /* GRID CONTAINER STYLES */
+      main {
+         max-width: 130.5em;
+         display: block;
+      }
+
+      #grid-container {
+         display: grid;
+         grid-template-columns: repeat(18, 7em);
+         grid-gap: .25em;
+      }
+
+      .col-span16 {
+         grid-column: span 16;
+      }
+
+      .col-span10 {
+         grid-column: span 10;
+      }
+
+      .col-span3 {
+         grid-column: span 3;
+      }
+
+      .col-hidden {
+         display: block;
+         visibility: hidden;
+      }
+
+
+      /* GRID CELL */
+      section {
+         margin: 0;
+      }
+
+      section:hover {
+         transition: .2s;
+         transform: scale(1.5);
+         cursor: pointer;
+         z-index: 2;
+      }
+
+
+      /* FOOTER */
+      footer {
+         font-size: 1.2em;
+         width: 100%;
+         margin: 4em 0;
+      }
+
+      ul {
+         justify-content: center;
+      }
+
+      li {
+         flex-basis: auto;
+         margin-bottom: 0;
+      }
+
+      li+li {
+         margin-left: 3em;
+      }
+   }
+}
+
+@media only screen and (min-width:102.5em) {
+   body {
+      font-size: .73em;
+   }
+}
