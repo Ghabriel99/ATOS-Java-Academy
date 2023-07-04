@@ -1,4 +1,3 @@
-// Available colors
 let colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"];
 
 let level = 1;
